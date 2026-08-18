@@ -11,11 +11,18 @@
     "step1:this": "node step-01-javascript/03-this-and-prototypes.js",
     "step1:exercises": "node step-01-javascript/04-exercises.js",
     "step5:eventloop": "node step-05-node-basics/01-event-loop.js",
-    "step6:server": "node step-06-express-api/server.js"
+    "step6:server": "node step-06-express-api/server.js",
+    "step7:auth": "node step-07-auth-security/server.js",
+    "step8:sql": "node step-08-databases/01-sql-crud.js",
+    "step8:n1": "node step-08-databases/02-n-plus-one.js",
+    "step8:orm": "node step-08-databases/03-orm-vs-mongo.js"
   },
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "better-sqlite3": "^11.10.0",
     "cors": "^2.8.5",
     "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

@@ -44,5 +44,10 @@ Thumbs.db
 *.swo
 *~
 
+# Local databases
+*.db
+*.db-journal
+*.sqlite
+
 # Optional: local editor settings (uncomment if you don't want to share)
 # .vscode/

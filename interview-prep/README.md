@@ -40,4 +40,7 @@ node step-01-javascript/02-promises-async.js
 npm run step2:forms                  # React forms demo in the browser
 node step-05-node-basics/01-event-loop.js
 node step-06-express-api/server.js   # starts API on :3000
+npm run step7:auth                   # JWT auth API on :3001
+npm run step8:sql                    # SQLite CRUD + JOIN
+npm run step8:n1                     # N+1 vs JOIN
 ```
