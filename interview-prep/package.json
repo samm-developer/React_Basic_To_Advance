@@ -1,0 +1,18 @@
+{
+  "name": "interview-prep",
+  "version": "1.0.0",
+  "description": "React + Node.js interview preparation kit",
+  "type": "module",
+  "scripts": {
+    "step1:closures": "node step-01-javascript/01-closures.js",
+    "step1:async": "node step-01-javascript/02-promises-async.js",
+    "step1:this": "node step-01-javascript/03-this-and-prototypes.js",
+    "step1:exercises": "node step-01-javascript/04-exercises.js",
+    "step5:eventloop": "node step-05-node-basics/01-event-loop.js",
+    "step6:server": "node step-06-express-api/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "cors": "^2.8.5"
+  }
+}
