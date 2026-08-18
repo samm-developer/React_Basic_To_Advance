@@ -38,19 +38,33 @@ const team = {
 };
 team.listMembers();
 
-// ─── 4. Prototype chain ──────────────────────────────────────────────────────
+// ─── 4. Prototype chain vs own property ──────────────────────────────────────
+
+// A) Method on prototype — shared by all instances (memory efficient)
 function Person(name) {
   this.name = name;
-  // Own property (on the instance) — hasOwnProperty("sayHi") === true
+}
+Person.prototype.sayHi = function () {
+  return `Hello, ${this.name}`;
+};
+
+const pProto = new Person("Dev");
+console.log("\n[Prototype] sayHi:", pProto.sayHi());
+console.log("[Prototype] instanceof Person:", pProto instanceof Person);
+console.log("[Prototype] hasOwnProperty('sayHi')?", pProto.hasOwnProperty("sayHi")); // false
+
+// B) Method on the instance — own property of that object
+function PersonOwn(name) {
+  this.name = name;
   this.sayHi = function () {
     return `Hello, ${this.name}`;
   };
 }
 
-const p = new Person("Dev");
-console.log("\nOwn method:", p.sayHi());
-console.log("instanceof Person:", p instanceof Person);
-console.log("Has own sayHi?", p.hasOwnProperty("sayHi")); // true — set on the instance
+const pOwn = new PersonOwn("Dev");
+console.log("\n[Own] sayHi:", pOwn.sayHi());
+console.log("[Own] instanceof PersonOwn:", pOwn instanceof PersonOwn);
+console.log("[Own] hasOwnProperty('sayHi')?", pOwn.hasOwnProperty("sayHi")); // true
 
 // ─── 5. Class syntax (syntactic sugar over prototypes) ───────────────────────
 class Employee extends Person {
