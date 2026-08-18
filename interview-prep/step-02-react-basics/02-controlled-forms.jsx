@@ -2,7 +2,7 @@
  * STEP 2 — Controlled Forms & Validation
  */
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function LoginForm({ onSubmit }) {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -53,8 +53,6 @@ function LoginForm({ onSubmit }) {
 
 // ─── Uncontrolled alternative (useRef) ──────────────────────────────────────
 // Q: When use uncontrolled? File inputs, integrating non-React libs, simple forms
-import { useRef } from "react";
-
 function UncontrolledLogin({ onSubmit }) {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);

@@ -37,6 +37,7 @@ Run Node examples: `node step-XX-*/filename.js`
 cd interview-prep
 node step-01-javascript/01-closures.js
 node step-01-javascript/02-promises-async.js
+npm run step2:forms                  # React forms demo in the browser
 node step-05-node-basics/01-event-loop.js
 node step-06-express-api/server.js   # starts API on :3000
 ```
